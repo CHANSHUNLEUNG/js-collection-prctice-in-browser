@@ -1,5 +1,11 @@
 'use strict';
 
 function collectSameElements(collectionA, objectB) {
-  return 'Implement the practice require, and begin changing code in this row';
+  let result = new Set();
+  collectionA.map((objectA,objectIndexA) => {
+    objectB["value"].map((elementB,index) => {
+      if(objectA["key"] == elementB){result.add(elementB);}
+    })
+  })
+  return Array.from(result.keys());
 }
